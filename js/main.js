@@ -320,6 +320,15 @@ body.addEventListener('click', function (e) {
       document.querySelector(hiddenBtn.getAttribute('href')).classList.add('_active');
     }
 
+
+
+
+    let productSubmit = thisTarget.closest('.product__submit--btn');
+    if(productSubmit) {
+      e.preventDefault();
+      productSubmit.parentNode.querySelector('.product__submit--message').classList.add('_active');
+    }
+
 })
 
 
@@ -332,6 +341,7 @@ let introSlider = new Swiper('.intro__slider', {
     
     direction: "horizontal",
     loop: true,
+    speed: 700,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
