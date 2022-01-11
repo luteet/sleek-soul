@@ -2288,8 +2288,8 @@ body._popup-active {
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-46%, -50%);
-          transform: translate(-46%, -50%);
+  -webkit-transform: translate(-46%, -51%);
+          transform: translate(-46%, -51%);
   width: 100%;
   padding-top: 100%;
   border-radius: 50%;
