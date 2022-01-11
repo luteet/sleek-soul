@@ -300,10 +300,18 @@
                     </div>
                     <form action="#" class="product__info">
                         <div class="product__info--image product__image">
-                            <picture>
-                                <source srcset="img/product/image.webp" type="image/webp">
-                                <img src="img/product/image.png" width="215" loading="lazy" alt="" class="product__image--img">
-                            </picture>
+                            <div class="product__image--elem" id="product-image-white">
+                                <picture>
+                                    <source srcset="img/product/image-white.webp" type="image/webp">
+                                    <img src="img/product/image-white.png" width="215" loading="lazy" alt="" class="product__image--img">
+                                </picture>
+                            </div>
+                            <div class="product__image--elem" id="product-image-pink">
+                                <picture>
+                                    <source srcset="img/product/image-pink.webp" type="image/webp">
+                                    <img src="img/product/image-pink.png" width="215" loading="lazy" alt="" class="product__image--img">
+                                </picture>
+                            </div>
                         </div>
                         <div class="product__info--descr">
                             <p>
@@ -352,22 +360,34 @@
                             <h3 class="product__color--title">
                                 Colors
                             </h3>
-                            <div class="product__color--elem">
+                            <div class="product__color--elem _active" data-product-image-id="product-image-white">
                                 <input type="radio" name="color" id="product-color-1" value="white" class="product__color--radio">
                                 <label for="product-color-1" class="product__color--label" style="background: #FFFFFF;"></label>
                             </div>
-                            <div class="product__color--elem">
+                            <div class="product__color--elem" data-product-image-id="product-image-pink">
                                 <input type="radio" name="color" id="product-color-2" value="pink" class="product__color--radio">
                                 <label for="product-color-2" class="product__color--label" style="background: #EEC1C1;"></label>
                             </div>
                         </div>
-                        <div class="product__info--price product__price">
+                        <div class="product__info--price product__price" data-price="300">
                             <span class="product__price--old-price">300$</span>
                             <span class="product__price--value">300$</span>
                         </div>
-                        <button type="submit" class="product__info--submit product__submit _btn">
-                            Add to card
-                        </button>
+                        <div class="product__submit">
+                            <button type="submit" class="product__info--submit product__submit--btn _btn">
+                                Add to card
+                            </button>
+                            <div class="product__submit--message _active">
+                                <svg class="product__submit--message-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M14.56 1.8134C17.5583 1.82799 19.9854 4.25502 20 7.25341C20 12.7467 10 18.1867 10 18.1867C10 18.1867 0 12.6667 0 7.25341C0 4.249 2.43555 1.8134 5.44002 1.8134C7.27915 1.79905 8.99854 2.72408 10 4.26671C11.0084 2.73158 12.7233 1.80896 14.56 1.8134Z" fill="#D7443E"/>
+                                </svg>
+                                <div class="product__submit--message-text">
+                                    <p>
+                                        Thank you, your item has been added to the cart.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -568,29 +588,659 @@
                 </div>
             </div>
         </section>
+        <section class="documentation _bg-parent _section-padding">
+            <div class="documentation__bg _bg _accent-bg">
+                <div class="documentation__bg--elem _1 _bg-elem">
+                    <picture>
+                        <source srcset="img/documentation/bg.webp" type="image/webp">
+                        <img src="img/documentation/bg.png" width="0" loading="lazy" alt="" class="documentation__bg--img _bg-img">    
+                    </picture>
+                </div>
+                <div class="documentation__bg--elem _2"></div>
+                <div class="documentation__bg--elem _3"></div>
+            </div>
+            <div class="documentation__container _container">
+                <h2 class="documentation__title _section-title _alt _center">
+                    How to Make a Tasty and<br> Healthy Drink on the Go
+                </h2>
+                <div class="documentation__block">
+                    <ul class="documentation__list">
+                        <li class="documentation__item">
+    <div class="documentation__item--body">
+        <div class="documentation__item--image">
+            <picture>
+                <source srcset="img/documentation/image-1.webp" type="image/webp">
+                <img src="img/documentation/image-1.png" width="200" loading="lazy" alt="" class="documentation__item--img">
+            </picture>
+        </div>
+        <div class="documentation__item--text">
+            <p>
+                Put your preferred healthy ingredients in the blender
+            </p>
+        </div>
+    </div>
+</li><li class="documentation__item">
+    <div class="documentation__item--body">
+        <div class="documentation__item--image">
+            <picture>
+                <source srcset="img/documentation/image-2.webp" type="image/webp">
+                <img src="img/documentation/image-2.png" width="200" loading="lazy" alt="" class="documentation__item--img">
+            </picture>
+        </div>
+        <div class="documentation__item--text">
+            <p>
+                Add some milk, juice, or water
+            </p>
+        </div>
+    </div>
+</li><li class="documentation__item">
+    <div class="documentation__item--body">
+        <div class="documentation__item--image">
+            <picture>
+                <source srcset="img/documentation/image-3.webp" type="image/webp">
+                <img src="img/documentation/image-3.png" width="200" loading="lazy" alt="" class="documentation__item--img">
+            </picture>
+        </div>
+        <div class="documentation__item--text">
+            <p>
+                Press the button<br> two times
+            </p>
+        </div>
+    </div>
+</li><li class="documentation__item">
+    <div class="documentation__item--body">
+        <div class="documentation__item--image">
+            <picture>
+                <source srcset="img/documentation/image-4.webp" type="image/webp">
+                <img src="img/documentation/image-4.png" width="200" loading="lazy" alt="" class="documentation__item--img">
+            </picture>
+        </div>
+        <div class="documentation__item--text">
+            <p>
+                Enjoy your favorite vitamin drink
+            </p>
+        </div>
+    </div>
+</li>
+                    </ul>
+                </div>
+                <div class="documentation__footer _center">
+                    <a href="#" class="documentation__btn _btn">
+                        More details
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="faq _section-padding" id="faq-section">
+            <div class="faq__container _container">
+                <h2 class="faq__title _section-title _center">
+                    FAQ
+                </h2>
+                <ul class="faq__list _hiddenParent" id="faq-list">
+                    <li class="faq__list--column">
+                        <ul class="faq__column">
+                            <li class="faq__item _active">
+    <div class="faq__item--body">
+        <h3 class="faq__item--title">
+            What are the standard shipping times?
+            <span class="faq__item--icon _icon-arrow"></span>
+        </h3>
+        <div class="faq__item--content">
+            <p>
+                Normally, the blender can be shipped within 2 to 4 business days.
+            </p>
+        </div>
+    </div>
+</li><li class="faq__item ">
+    <div class="faq__item--body">
+        <h3 class="faq__item--title">
+            How to care for Sleek Soul?
+            <span class="faq__item--icon _icon-arrow"></span>
+        </h3>
+        <div class="faq__item--content">
+            <p>
+                <ul><li>Although impact-resistant materials are used to manufacture Sleek Soul blenders, handling them requires care.</li><li>A handle on the bottle cap allows you to carry it around all day. However, Sleek Soul must be protected from direct sunlight and should not be left in a hot car in summer since high temperatures can cause rubber seals inside and outside the blender to perish.</li><li>When not using it, remove the lid from your Sleek Soul. Such air-drying will prevent the buildup of moisture in the blender itself, as well as around its seal. In this way, Sleek Soul will preserve fresh smell and look for a long time.</li><li>Avoid adding fizzy liquids like sparkling water or soft drinks to the blend, as they can create too high pressure in the bottle, resulting in its breakage.</li><li>Never pour boiling water into the Sleek Soul blender! The maximum allowed water temperature should not exceed 70 degrees. </li><li>Although all the blender parts (excluding the motor) are dishwasher-safe, we recommend washing it by hand in warm water with dish detergent. Before doing so, twist your Sleek Soul apart completely.</li></ul>
+            </p>
+        </div>
+    </div>
+</li><li class="faq__item ">
+    <div class="faq__item--body">
+        <h3 class="faq__item--title">
+            Is a warranty given?
+            <span class="faq__item--icon _icon-arrow"></span>
+        </h3>
+        <div class="faq__item--content">
+            <p>
+                Yes, a two-year warranty is provided to consumers, so the purchase receipt needs to be kept.
+            </p>
+        </div>
+    </div>
+</li><li class="faq__item ">
+    <div class="faq__item--body">
+        <h3 class="faq__item--title">
+            Is Sleek Soul intended for blending frozen fruits?
+            <span class="faq__item--icon _icon-arrow"></span>
+        </h3>
+        <div class="faq__item--content">
+            <p>
+                Yes, Sleek Soul is intended for blending frozen fruits. Please bear in mind that even a fully charged battery can make fewer blends in this case due to their hardness.
+            </p>
+        </div>
+    </div>
+</li>
+                        </ul>
+                    </li>
+                    <li class="faq__list--column _hiddenItem">
+                        <ul class="faq__column">
+                            <li class="faq__item ">
+    <div class="faq__item--body">
+        <h3 class="faq__item--title">
+            How much time is needed<br> to recharge the battery?
+            <span class="faq__item--icon _icon-arrow"></span>
+        </h3>
+        <div class="faq__item--content">
+            <p>
+                The Sleek Soul battery will be fully charged after 2 hours, thanks to a supplied wireless charger.
+            </p>
+        </div>
+    </div>
+</li><li class="faq__item ">
+    <div class="faq__item--body">
+        <h3 class="faq__item--title">
+            What is the number of blends the full battery allows doing?
+            <span class="faq__item--icon _icon-arrow"></span>
+        </h3>
+        <div class="faq__item--content">
+            <p>
+                When the battery is full, it can blend as many as 12 times before it will need to be recharged. <br>Everything depends on the ingredients you are going to blend. <br>Making a protein shake requires less power than mixing fresh produce, for example.
+            </p>
+        </div>
+    </div>
+</li><li class="faq__item ">
+    <div class="faq__item--body">
+        <h3 class="faq__item--title">
+            Can the Sleek Soul bottle<br> be stored in a fridge?
+            <span class="faq__item--icon _icon-arrow"></span>
+        </h3>
+        <div class="faq__item--content">
+            <p>
+                Yes, the door of your fridge will be a good storage place for Sleek Soul.<br>Avoid placing the bottle toward the back of your fridge.
+            </p>
+        </div>
+    </div>
+</li><li class="faq__item ">
+    <div class="faq__item--body">
+        <h3 class="faq__item--title">
+            Is it loud?
+            <span class="faq__item--icon _icon-arrow"></span>
+        </h3>
+        <div class="faq__item--content">
+            <p>
+                Mix Juicer is ultra-quiet and makes no buzzing sound like traditional blenders. Quiet Enough For A Library! <br><br> If you’re looking for the perfect blender to mix all your favorite fruits into one amazing drink, then you’ve come to the right place! Our SLEEK SOUL portable blender effortlessly cuts up fruits, vegetables, and ice and blends them into a fresh and tasty smoothie. This 380mL lightweight, portable juicer can also serve as a drink container so that you can take your delicious beverage with you on the go. It is easy to use and clean and has a USB rechargeable battery for added convenience.
+            </p>
+        </div>
+    </div>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="faq__footer _center">
+                    <a href="#faq-list" class="faq__btn _btn _transparent _hiddenBtn">
+                        See more
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="reviews _bg-parent _section-padding">
+            <div class="reviews__bg _bg">
+                <div class="reviews__bg--elem _bg-elem _1"></div>
+                <div class="reviews__bg--elem _bg-elem _2"></div>
+                <div class="reviews__bg--elem _bg-elem _3"></div>
+                <div class="reviews__bg--elem _bg-elem _4"></div>
+            </div>
+            <div class="reviews__container _container">
+                <h2 class="reviews__title _section-title">
+                    Review customers
+                </h2>
+                <div class="reviews__leave-review">
+                    <div class="reviews__leave-review--header">
+                        <h3 class="reviews__leave-review--title _title">
+                            Have already bought the product?
+                        </h3>
+                        <div class="reviews__leave-review--text">
+                            <p>
+                                Share your review and get -10% discount on your next purchase!
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#" class="reviews__leave-review--btn _btn _transparent">
+                        Leave review
+                    </a>
+                </div>
+                <div class="reviews__slider swiper">
+                    <ul class="reviews__list swiper-wrapper">
+                        <li class="reviews__item swiper-slide">
+    <div class="reviews__item--body">
+        <div class="reviews__item--header">
+            <div class="reviews__item--avatar">
+                <picture>
+                    <source srcset="img/reviews/avatar.webp" type="image/webp">
+                    <img src="img/reviews/avatar.png" width="40" height="40" loading="lazy" alt="" class="reviews__item--avatar-img">
+                </picture>
+            </div>
+            <h3 class="reviews__item--title _title">
+                Ivan Ivanov
+            </h3>
+        </div>
+        <div class="reviews__item--text">
+            <p>
+                Four very sharp stainless-steel blades quickly rotate to smoothly cut up and mix the fruit. Outer design of this bottle is very attractive while the internal accessories were built to last a lifetime
+            </p>
+        </div>
+        <div class="reviews__item--gallery">
+            <ul class="reviews__item--gallery-list">
+                <li class="reviews__item--gallery-item">
+                    <a href="https://www.akamai.com/content/dam/site/im-demo/perceptual-standard.jpg?imbypass=true" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-1.webp" type="image/webp">
+                            <img src="img/reviews/image-1.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="reviews__item--gallery-item">
+                    <a href="https://images.unsplash.com/photo-1641849048330-a34fa8d7a268?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-2.webp" type="image/webp">
+                            <img src="img/reviews/image-2.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="reviews__item--gallery-item">
+                    <a href="https://images.unsplash.com/photo-1641840284490-e2d2d5a15cb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1146&q=80" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-3.webp" type="image/webp">
+                            <img src="img/reviews/image-3.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="reviews__item--footer">
+            <span class="reviews__item--date">12.01.22</span>
+            <span class="reviews__item--location">
+                <span class="reviews__item--location-icon _icon-location"></span>
+                Kiev
+            </span>
+        </div>
+    </div>
+</li><li class="reviews__item swiper-slide">
+    <div class="reviews__item--body">
+        <div class="reviews__item--header">
+            <div class="reviews__item--avatar">
+                <picture>
+                    <source srcset="img/reviews/avatar.webp" type="image/webp">
+                    <img src="img/reviews/avatar.png" width="40" height="40" loading="lazy" alt="" class="reviews__item--avatar-img">
+                </picture>
+            </div>
+            <h3 class="reviews__item--title _title">
+                Ivan Ivanov
+            </h3>
+        </div>
+        <div class="reviews__item--text">
+            <p>
+                Four very sharp stainless-steel blades quickly rotate to smoothly cut up and mix the fruit. Outer design of this bottle is very attractive while the internal accessories were built to last a lifetime
+            </p>
+        </div>
+        <div class="reviews__item--gallery">
+            <ul class="reviews__item--gallery-list">
+                <li class="reviews__item--gallery-item">
+                    <a href="https://www.akamai.com/content/dam/site/im-demo/perceptual-standard.jpg?imbypass=true" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-1.webp" type="image/webp">
+                            <img src="img/reviews/image-1.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="reviews__item--gallery-item">
+                    <a href="https://images.unsplash.com/photo-1641849048330-a34fa8d7a268?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-2.webp" type="image/webp">
+                            <img src="img/reviews/image-2.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="reviews__item--gallery-item">
+                    <a href="https://images.unsplash.com/photo-1641840284490-e2d2d5a15cb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1146&q=80" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-3.webp" type="image/webp">
+                            <img src="img/reviews/image-3.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="reviews__item--footer">
+            <span class="reviews__item--date">12.01.22</span>
+            <span class="reviews__item--location">
+                <span class="reviews__item--location-icon _icon-location"></span>
+                Kiev
+            </span>
+        </div>
+    </div>
+</li><li class="reviews__item swiper-slide">
+    <div class="reviews__item--body">
+        <div class="reviews__item--header">
+            <div class="reviews__item--avatar">
+                <picture>
+                    <source srcset="img/reviews/avatar.webp" type="image/webp">
+                    <img src="img/reviews/avatar.png" width="40" height="40" loading="lazy" alt="" class="reviews__item--avatar-img">
+                </picture>
+            </div>
+            <h3 class="reviews__item--title _title">
+                Ivan Ivanov
+            </h3>
+        </div>
+        <div class="reviews__item--text">
+            <p>
+                Four very sharp stainless-steel blades quickly rotate to smoothly cut up and mix the fruit. Outer design of this bottle is very attractive while the internal accessories were built to last a lifetime
+            </p>
+        </div>
+        <div class="reviews__item--gallery">
+            <ul class="reviews__item--gallery-list">
+                <li class="reviews__item--gallery-item">
+                    <a href="https://www.akamai.com/content/dam/site/im-demo/perceptual-standard.jpg?imbypass=true" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-1.webp" type="image/webp">
+                            <img src="img/reviews/image-1.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="reviews__item--gallery-item">
+                    <a href="https://images.unsplash.com/photo-1641849048330-a34fa8d7a268?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-2.webp" type="image/webp">
+                            <img src="img/reviews/image-2.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="reviews__item--gallery-item">
+                    <a href="https://images.unsplash.com/photo-1641840284490-e2d2d5a15cb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1146&q=80" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-3.webp" type="image/webp">
+                            <img src="img/reviews/image-3.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="reviews__item--footer">
+            <span class="reviews__item--date">12.01.22</span>
+            <span class="reviews__item--location">
+                <span class="reviews__item--location-icon _icon-location"></span>
+                Kiev
+            </span>
+        </div>
+    </div>
+</li><li class="reviews__item swiper-slide">
+    <div class="reviews__item--body">
+        <div class="reviews__item--header">
+            <div class="reviews__item--avatar">
+                <picture>
+                    <source srcset="img/reviews/avatar.webp" type="image/webp">
+                    <img src="img/reviews/avatar.png" width="40" height="40" loading="lazy" alt="" class="reviews__item--avatar-img">
+                </picture>
+            </div>
+            <h3 class="reviews__item--title _title">
+                Ivan Ivanov
+            </h3>
+        </div>
+        <div class="reviews__item--text">
+            <p>
+                Four very sharp stainless-steel blades quickly rotate to smoothly cut up and mix the fruit. Outer design of this bottle is very attractive while the internal accessories were built to last a lifetime
+            </p>
+        </div>
+        <div class="reviews__item--gallery">
+            <ul class="reviews__item--gallery-list">
+                <li class="reviews__item--gallery-item">
+                    <a href="https://www.akamai.com/content/dam/site/im-demo/perceptual-standard.jpg?imbypass=true" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-1.webp" type="image/webp">
+                            <img src="img/reviews/image-1.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="reviews__item--gallery-item">
+                    <a href="https://images.unsplash.com/photo-1641849048330-a34fa8d7a268?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-2.webp" type="image/webp">
+                            <img src="img/reviews/image-2.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="reviews__item--gallery-item">
+                    <a href="https://images.unsplash.com/photo-1641840284490-e2d2d5a15cb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1146&q=80" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-3.webp" type="image/webp">
+                            <img src="img/reviews/image-3.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="reviews__item--footer">
+            <span class="reviews__item--date">12.01.22</span>
+            <span class="reviews__item--location">
+                <span class="reviews__item--location-icon _icon-location"></span>
+                Kiev
+            </span>
+        </div>
+    </div>
+</li><li class="reviews__item swiper-slide">
+    <div class="reviews__item--body">
+        <div class="reviews__item--header">
+            <div class="reviews__item--avatar">
+                <picture>
+                    <source srcset="img/reviews/avatar.webp" type="image/webp">
+                    <img src="img/reviews/avatar.png" width="40" height="40" loading="lazy" alt="" class="reviews__item--avatar-img">
+                </picture>
+            </div>
+            <h3 class="reviews__item--title _title">
+                Ivan Ivanov
+            </h3>
+        </div>
+        <div class="reviews__item--text">
+            <p>
+                Four very sharp stainless-steel blades quickly rotate to smoothly cut up and mix the fruit. Outer design of this bottle is very attractive while the internal accessories were built to last a lifetime
+            </p>
+        </div>
+        <div class="reviews__item--gallery">
+            <ul class="reviews__item--gallery-list">
+                <li class="reviews__item--gallery-item">
+                    <a href="https://www.akamai.com/content/dam/site/im-demo/perceptual-standard.jpg?imbypass=true" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-1.webp" type="image/webp">
+                            <img src="img/reviews/image-1.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="reviews__item--gallery-item">
+                    <a href="https://images.unsplash.com/photo-1641849048330-a34fa8d7a268?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-2.webp" type="image/webp">
+                            <img src="img/reviews/image-2.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+                <li class="reviews__item--gallery-item">
+                    <a href="https://images.unsplash.com/photo-1641840284490-e2d2d5a15cb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1146&q=80" class="reviews__item--gallery-link _gallery-popup-link">
+                        <picture>
+                            <source srcset="img/reviews/image-3.webp" type="image/webp">
+                            <img src="img/reviews/image-3.jpg" loading="lazy" width="50" height="50" alt="" class="reviews__item--gallery-img">
+                        </picture>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="reviews__item--footer">
+            <span class="reviews__item--date">12.01.22</span>
+            <span class="reviews__item--location">
+                <span class="reviews__item--location-icon _icon-location"></span>
+                Kiev
+            </span>
+        </div>
+    </div>
+</li>
+                    </ul>
+                    <div class="reviews__nav">
+                        <div class="reviews__nav--pagination swiper-pagination _alt"></div>
+                    </div>
+                </div>
+                <div class="reviews__arrows">
+                    <div class="reviews__nav--arrow _next _sliderbtn-arrow swiper-button-next"></div>
+                        <div class="reviews__nav--arrow _prev _sliderbtn-arrow swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts _bg-parent _section-padding">
+            <div class="contacts__container _container">
+                <div class="contacts__block">
+                    <div class="contacts__block--info">
+                        <h2 class="contacts__block--title _section-title">
+                            Contacts
+                        </h2>
+                        <ul class="contacts__block--list contacts__social-list">
+                            <li class="contacts__social-list--item">
+                                <a href="#" class="contacts__social-list--link" title="Facebook">
+                                    <span class="contacts__social-list--icon _icon-facebook"></span>
+                                </a>
+                            </li>
+                            <li class="contacts__social-list--item">
+                                <a href="#" class="contacts__social-list--link" title="Instagram">
+                                    <span class="contacts__social-list--icon _icon-instagram"></span>
+                                </a>
+                            </li>
+                            <li class="contacts__social-list--item">
+                                <a href="#" class="contacts__social-list--link" title="Tik Tok">
+                                    <span class="contacts__social-list--icon _icon-tik-tok"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="contacts__block--link _btn _transparent _accent">
+                            Contacts Us
+                        </a>
+                    </div>
+                    <div class="contacts__block--bg">
+                        <img src="img/contacts/section-logo.svg" width="120" loading="lazy" alt="" class="contacts__block--logo">
+                    </div>
+                </div>
+                <div class="contacts__footer">
+                    <div class="contacts__footer--bg">
+                        <img src="img/contacts/image-bg.png" width="0" loading="lazy" alt="" class="contacts__footer--img">
+                    </div>
+                    <div class="contacts__footer--image">
+                        <picture>
+                            <source srcset="img/contacts/image.webp" type="image/webp">
+                            <img src="img/contacts/image.png" width="0" loading="lazy" alt="" class="contacts__footer--img">
+                        </picture>
+                    </div>
+                    <ul class="contacts__footer--list">
+                        <li class="contacts__footer--item">
+                            <div class="contacts__footer--item-icon-wrapper">
+                                <span class="contacts__footer--item-icon _icon-map"></span>
+                            </div>
+                            <a href="#" class="contacts__footer--link">
+                                RAKEZ Business Zone-FZ Academic Zone01 Business Center 5 Dubai UAE
+                            </a>
+                        </li>
+                        <li class="contacts__footer--item">
+                            <div class="contacts__footer--item-icon-wrapper">
+                                <span class="contacts__footer--item-icon _icon-email"></span>
+                            </div>
+                            <a href="mailto:hello@sleeksoul.com" class="contacts__footer--link">
+                                hello@sleeksoul.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
     
         <footer class="footer">
-        <div class="footer__container _container">
-            <div class="footer__row">
-                <a href="#" class="footer__logo">
-                    <img src="img/logo.svg" width="150" loading="lazy" alt="" class="footer__logo--img">
+        <div class="footer__row">
+            <div class="footer__container _container">
+                <a href="#" class="footer__btn-to-up _btn-to-scroll">
+                    <span class="footer__btn-to-up--icon _icon-arrow"></span>
                 </a>
+                <div class="footer__logo">
+                    <a href="#" class="footer__logo--link">
+                        <img src="img/logo.svg" width="95" loading="lazy" alt="" class="footer__logo--img">
+                    </a>
+                </div>
                 <nav class="footer__nav">
                     <ul class="footer__nav--list">
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link _nav-btn _btn-to-scroll">
-                                LINK
+                            <a href="#" class="footer__nav--link">
+                                About Us
                             </a>
                         </li>
                         <li class="footer__nav--item">
-                            <a href="#" class="footer__nav--link _nav-btn _alt _btn-open-popup">
-                                LINK
+                            <a href="#faq-section" class="footer__nav--link _btn-to-scroll">
+                                FAQs 
+                            </a>
+                        </li>
+                        <li class="footer__nav--item">
+                            <a href="#" class="footer__nav--link">
+                                Documentation 
                             </a>
                         </li>
                     </ul>
                 </nav>
+                <div class="footer__bottom">
+                    <div class="footer__contacts">
+                        <ul class="footer__contacts--list">
+                            <li class="footer__contacts--item">
+                                <a href="#" class="footer__contacts--link" title="Map">
+                                    <span class="footer__contacts--icon _icon-map"></span>
+                                </a>
+                            </li>
+                            <li class="footer__contacts--item">
+                                <a href="#" class="footer__contacts--link" title="Email">
+                                    <span class="footer__contacts--icon _icon-email"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="footer__contact-btn _btn _transparent _light">
+                            Contact Us
+                        </a>
+                    </div>
+                    <ul class="footer__copy--list" data-append-768-to=".footer__copy--block">
+                        <li class="footer__copy--item">
+                            <a href="#" class="footer__copy--link">
+                                Terms & Conditions
+                            </a>
+                        </li>
+                        <li class="footer__copy--item">
+                            <a href="#" class="footer__copy--link">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li class="footer__copy--item">
+                            <a href="#" class="footer__copy--link">
+                                Returns Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </div>
+        <div class="footer__copy">
+            <div class="footer__copy--container _container">
+                <div class="footer__copy--text">
+                    Copyright © 2022 Sleek Soul. All rights reserved.
+                </div>
+                <div class="footer__copy--block"></div>
+            </div>        
         </div>
     </footer>
 
