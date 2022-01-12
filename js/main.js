@@ -152,7 +152,14 @@ document.querySelectorAll('.product__color--elem._active').forEach(element => {
 
 
 let thisTarget, faqSlideCheck = true;
+let productAddToCartMessage = document.querySelector('.product__submit--message');
 body.addEventListener('click', function (e) {
+
+  if(productAddToCartMessage) {
+    if(productAddToCartMessage.classList.contains('_active')) {
+      productAddToCartMessage.classList.remove('_active');
+    }
+  }
 
     thisTarget = e.target;
 
@@ -340,7 +347,7 @@ let introSlider = new Swiper('.intro__slider', {
     slidesPerView: 1,
     
     direction: "horizontal",
-    loop: true,
+    /* loop: true, */
     speed: 700,
     pagination: {
       el: '.swiper-pagination',
@@ -365,6 +372,10 @@ let introSlider = new Swiper('.intro__slider', {
       },
     }
 });
+
+if(document.querySelectorAll('.intro__slider--item').length <= 1) {
+  document.querySelector('.intro__slider--nav').classList.add('_disable');
+}
 
 new Swiper('.reviews__slider', {
   

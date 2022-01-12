@@ -1709,12 +1709,10 @@ body._popup-active {
 ._main-title {
   font-family: var(--title-font);
   font-weight: 500;
-  font-size: 60px;
   line-height: 100%;
   letter-spacing: 0.06em;
-  /* line-height: 115%; */
   color: var(--accent-v2);
-  font-size: 1.5625rem;
+  font-size: 1.875rem;
 }
 
 ._title {
@@ -1731,7 +1729,7 @@ body._popup-active {
   line-height: 100%;
   letter-spacing: 0.06em;
   color: var(--accent);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 ._section-title._alt {
@@ -2126,12 +2124,6 @@ body._popup-active {
 
 .intro {
   position: relative;
-  /* min-height: 100vh; */
-  /* min-height: 800px; */
-  /* padding-top: 200px; */
-  /* display: flex;
-  flex-direction: column; */
-  /* min-height: 100vh; */
 }
 
 .intro__bg {
@@ -2196,6 +2188,10 @@ body._popup-active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.intro__slider--nav._disable {
+  display: none;
 }
 
 .intro__slider--pagination {
@@ -2308,12 +2304,12 @@ body._popup-active {
 
 .intro__item--decor-gradient {
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
-  width: 582px;
+  width: 100vw;
   height: 169px;
-  -webkit-transform: translate(35%, 0);
-          transform: translate(35%, 0);
+  -webkit-transform: translate(0px, 0);
+          transform: translate(0px, 0);
   background: linear-gradient(0.2deg, #F4DEE3 0.17%, rgba(244, 222, 227, 0) 99.83%);
   z-index: -1;
 }
@@ -2398,7 +2394,7 @@ body._popup-active {
 }
 
 .add__text {
-  line-height: 102%;
+  line-height: 122%;
   margin-top: 10px;
   font-size: 0.875rem;
 }
@@ -2601,7 +2597,7 @@ body._popup-active {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 100%;
           flex: 1 1 100%;
-  line-height: 100%;
+  line-height: 120%;
   font-size: 0.875rem;
 }
 
@@ -2941,7 +2937,7 @@ body._popup-active {
 .advantages__item--text {
   padding-top: 5px;
   font-size: 0.875rem;
-  line-height: 100%;
+  line-height: 120%;
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -3037,7 +3033,6 @@ body._popup-active {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  /* padding: 0 0 25px 0; */
   min-height: 100%;
   border-top: 1px solid transparent;
 }
@@ -3070,7 +3065,7 @@ body._popup-active {
 .features__item--text {
   font-weight: 300;
   color: rgba(0, 0, 0, 0.6);
-  line-height: 100%;
+  line-height: 120%;
   margin-top: 15px;
 }
 
@@ -3154,9 +3149,6 @@ body._popup-active {
           flex: 1 1 100%;
   padding: 15px 0;
   position: relative;
-  /* &:nth-child(even) &--text::before {
-
-  } */
 }
 
 .documentation__item:not(:first-child)::before {
@@ -3246,7 +3238,7 @@ body._popup-active {
   padding-right: 10px;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 100%;
+  line-height: 120%;
   color: var(--white);
 }
 
@@ -3258,14 +3250,6 @@ body._popup-active {
   font-size: 1.25rem;
   line-height: 100%;
   color: var(--accent-v2);
-}
-
-.documentation__footer {
-  /*         padding-bottom: 15px;
-          @include _768 {
-              margin-top: 80px;
-              margin-bottom: 12px;
-          } */
 }
 
 .faq {
@@ -3343,11 +3327,8 @@ body._popup-active {
   margin: 0 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   font-family: "Inter";
-  line-height: 120%;
+  line-height: 135%;
   color: rgba(255, 255, 255, 0.6);
-  /* & ul {
-
-  } */
 }
 
 .faq__item--content ul li {
@@ -3442,38 +3423,6 @@ body._popup-active {
   text-align: center;
 }
 
-.reviews__leave-review {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  text-align: center;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  padding-top: 37px;
-}
-
-.reviews__leave-review--header {
-  /* @include _768 {
-      display: none;
-  } */
-}
-
-.reviews__leave-review--title {
-  font-size: 1rem;
-}
-
-.reviews__leave-review--text {
-  padding-top: 15px;
-  color: rgba(0, 0, 0, 0.6);
-  line-height: 100%;
-  font-size: 0.875rem;
-}
-
-.reviews__leave-review--btn {
-  margin-top: 20px;
-}
-
 .reviews__slider {
   padding: 20px 0 30px 0;
 }
@@ -3519,7 +3468,7 @@ body._popup-active {
 .reviews__item--text {
   padding-top: 7px;
   padding-bottom: 10px;
-  line-height: 100%;
+  line-height: 135%;
   margin-right: -20px;
   color: rgba(0, 0, 0, 0.6);
 }
@@ -3598,6 +3547,32 @@ body._popup-active {
 
 .reviews__nav--pagination {
   bottom: -10px !important;
+}
+
+.reviews__leave-review {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-top: 37px;
+}
+
+.reviews__leave-review--title {
+  font-size: 1rem;
+}
+
+.reviews__leave-review--text {
+  padding-top: 15px;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 135%;
+  font-size: 0.875rem;
+}
+
+.reviews__leave-review--btn {
+  margin-top: 20px;
 }
 
 .contacts__container {
@@ -4143,8 +4118,8 @@ body._popup-active {
 
   .intro__item--info {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 80%;
-            flex: 0 1 80%;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     text-align: left;
     margin-bottom: 0;
     padding: 0 var(--container-padding) 0 0;
@@ -4181,7 +4156,9 @@ body._popup-active {
   }
 
   .intro__item--decor-gradient {
-    width: 320px;
+    width: 100vw;
+    -webkit-transform: translate(260px, 0);
+            transform: translate(260px, 0);
   }
 
   .intro__item--img {
@@ -4599,10 +4576,6 @@ body._popup-active {
     margin-top: 0;
   }
 
-  .reviews__leave-review {
-    padding-top: 50px;
-  }
-
   .reviews__slider {
     padding: 43px 0 40px 0;
   }
@@ -4638,6 +4611,10 @@ body._popup-active {
 
   .reviews__item--footer {
     padding-top: 20px;
+  }
+
+  .reviews__leave-review {
+    padding-top: 50px;
   }
 
   .contacts__container {
@@ -4885,8 +4862,8 @@ body._popup-active {
 
   .intro__item--info {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 60%;
-            flex: 0 1 60%;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     padding-top: 45px;
   }
 
@@ -4912,7 +4889,9 @@ body._popup-active {
   }
 
   .intro__item--decor-gradient {
-    width: 582px;
+    width: 100vw;
+    -webkit-transform: translate(300px, 0);
+            transform: translate(300px, 0);
   }
 
   .add__container {
