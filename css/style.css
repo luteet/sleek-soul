@@ -2731,6 +2731,15 @@ body._popup-active {
   transition: opacity 0.2s ease-in-out;
 }
 
+.product__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .product__price--old-price {
   font-size: 0.875rem;
   color: rgba(0, 0, 0, 0.2);
@@ -4285,6 +4294,12 @@ body._popup-active {
     margin-bottom: 15px;
     font-size: 1rem;
     font-weight: 500;
+  }
+
+  .product__price {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   .product__price--old-price {
