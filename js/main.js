@@ -493,7 +493,7 @@ let append_992_Items = document.querySelectorAll('[data-append-992-to]'),
       windowSize = window.innerWidth;
       
 
-      resizeCheckFunc(769, 
+      resizeCheckFunc(768, 
         function () {  // screen > 768px
           
           for(let i = 0; i<append_768_ItemsList.length; i++) {
@@ -555,7 +555,7 @@ let append_992_Items = document.querySelectorAll('[data-append-992-to]'),
           for(let i = 0; i<append_992_ItemsList.length; i++) {
             let appendParent = append_992_ItemsList[i][1];
             
-            if(!resizeCheck['769'] || !append_992_ItemsList[i][0].dataset['append-768To']) {
+            if(!resizeCheck['768'] || !append_992_ItemsList[i][0].dataset['append-768To']) {
               appendParent.append(append_992_ItemsList[i][0]);
               
             }
