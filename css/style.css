@@ -2120,7 +2120,6 @@ body._popup-active {
 
 .header__order-btn {
   font-size: 0.875rem;
-  margin-left: 15px;
   -webkit-box-shadow: var(--inset-shadow);
           box-shadow: var(--inset-shadow);
 }
@@ -4064,6 +4063,10 @@ body._popup-active {
   .header__lang--list {
     top: auto;
     bottom: 100%;
+  }
+
+  .header__order-btn {
+    margin-left: 15px;
   }
 
   .intro__bg--elem._1 {
