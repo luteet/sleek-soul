@@ -380,7 +380,7 @@ if(document.querySelectorAll('.intro__slider--item').length <= 1) {
 
 new Swiper('.reviews__slider', {
   
-  spaceBetween: 0,
+  spaceBetween: 15,
   slidesPerView: 1,
   
   /* loop: true, */
