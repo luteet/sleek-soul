@@ -70,6 +70,7 @@ function galleryPopup(arg) {
           `
           <div class="_gallery-popup _hidden">
               <div class="_gallery-popup-bg"></div>
+              <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
               <div class="_gallery-popup-body _gallery-popup-max">
                   <button type="button" class="_gallery-popup-close-btn">
                     ✕

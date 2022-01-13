@@ -1821,9 +1821,9 @@ body._popup-active {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  /* width: calc(100% - 30px); */
   max-height: calc(100% - 30px);
   max-width: var(--max-width-image);
+  opacity: 1;
   -o-object-fit: contain;
      object-fit: contain;
   color: white;
@@ -1855,6 +1855,71 @@ body._popup-active {
   text-shadow: 0 0 5px black;
   text-shadow: 0px 0px 15px black;
   z-index: 1000;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+.lds-ring div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  margin: 8px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .header {
@@ -3801,11 +3866,22 @@ body._popup-active {
   top: -30px;
   -webkit-transform: translate(0%, -50%);
           transform: translate(0%, -50%);
+  -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
+  transition: -webkit-box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0);
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0);
   width: 60px;
   height: 60px;
   color: var(--accent);
   border-radius: 50%;
   background-color: var(--accent-v2);
+}
+
+.footer__btn-to-up:hover {
+  -webkit-box-shadow: 0px 0px 15px var(--accent-v2);
+          box-shadow: 0px 0px 15px var(--accent-v2);
 }
 
 .footer__btn-to-up--icon {
@@ -4023,8 +4099,18 @@ body._popup-active {
   }
 
   ._gallery-popup-img {
-    /* width: var(--width-image); */
     max-width: var(--max-width-image);
+  }
+
+  .lds-ring {
+    width: 80px;
+    height: 80px;
+  }
+
+  .lds-ring div {
+    width: 64px;
+    height: 64px;
+    border: 8px solid #fff;
   }
 
   .header__logo {
